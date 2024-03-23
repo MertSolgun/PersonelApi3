@@ -13,7 +13,7 @@
       "name": "ISC"
     }
   },
-  "host": "127.0.0.1:8000",
+  "host": "https://personel-api-gamma.vercel.app/:8000",
   "basePath": "/",
   "schemes": [
     "http",
@@ -774,7 +774,7 @@
             },
             "default": {
               "type": "number",
-              "example": 1711138909731
+              "example": 1711189626616
             }
           }
         }
