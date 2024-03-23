@@ -26,9 +26,10 @@ app.use(require("./src/routes/"));
 
 //?JSON
 
-app.use("/PersonnelAPI/documents/json", (req, res) => {
-  res.sendFile("swagger.json", { root: "." });
-});
+app.use(
+  "/documents/json",
+  express.static(__dirname + "/PersonnelAPI/swagger.json")
+);
 
 //? Swagger
 const swaggerJson = require("./swagger.json");
