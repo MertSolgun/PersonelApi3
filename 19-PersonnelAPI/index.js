@@ -26,10 +26,12 @@ app.use(require("./src/routes/"));
 
 //?JSON
 
-app.use(
-  "/documents/json",
-  express.static(__dirname + "/PersonnelAPI/swagger.json")
-);
+const path = require("path");
+
+app.use("/documents/json", (req, res) => {
+  const filePath = path.join(__dirname, "PersonnelAPI", "swagger.json");
+  res.sendFile(filePath);
+});
 
 //? Swagger
 const swaggerJson = require("./swagger.json");
