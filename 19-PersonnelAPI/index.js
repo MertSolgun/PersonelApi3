@@ -21,7 +21,7 @@ app.use(require("./src/middlewares/authentication"));
 app.use(require("./src/routes/"));
 
 //swagger
-app.use("/swagger", express.static(path.join(__dirname, "swagger")));
+app.use("/swagger", express.static("swagger"));
 
 app.all("/", (req, res) => {
   res.send({
