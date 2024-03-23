@@ -23,6 +23,38 @@ app.use(require("./src/routes/"));
 //swagger
 app.use("/swagger", express.static("swagger"));
 
+//Documention
+
+//?JSON
+
+app.use("/documents/json", (req, res) => {
+  res.sendFile("swagger.json", { root: "." });
+});
+
+//? Swagger
+const swaggerJson = require("./swagger.json");
+const swaggerUi = require("swagger-ui-express");
+app.use(
+  "/documents/swagger",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerJson, {
+    swaggerOptions: { persistAuthorization: true },
+  })
+);
+
+//? Redoc
+
+const redoc = require("redoc-express");
+app.use(
+  "/documents/redoc",
+  redoc({
+    title: "Personel Api",
+    specUrl: "/documents/json",
+  })
+);
+
+app.use(require("./src/middlewares/errorHandler"));
+
 app.all("/", (req, res) => {
   res.send({
     error: false,
@@ -38,39 +70,6 @@ app.all("/", (req, res) => {
     },
   });
 });
-
-//Documention
-
-//?JSON
-
-app.use("/documents/json", (req, res) => {
-  res.sendFile("swagger.json", { root: "." });
-});
-
-//? Swagger
-const swaggerJson = require("./swagger.json");
-const swaggerUi = require("swagger-ui-express");
-
-//? Redoc
-
-const redoc = require("redoc-express");
-app.use(
-  "/documents/redoc",
-  redoc({
-    title: "Personel Api",
-    specUrl: "/documents/json",
-  })
-);
-
-app.use(
-  "/documents/swagger",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerJson, {
-    swaggerOptions: { persistAuthorization: true },
-  })
-);
-
-app.use(require("./src/middlewares/errorHandler"));
 
 const PORT = process.env?.PORT;
 
