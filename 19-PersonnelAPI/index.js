@@ -26,7 +26,7 @@ app.use(require("./src/routes/"));
 
 //?JSON
 
-app.use("/documents/json", (req, res) => {
+app.use("/PersonnelAPI/documents/json", (req, res) => {
   res.sendFile("swagger.json", { root: "." });
 });
 
