@@ -61,7 +61,7 @@ app.all("/", (req, res) => {
     user: req.user,
     api: {
       documents: {
-        swagger: "https://personel-api3.vercel.app//documents/swagger",
+        swagger: "https://personel-api3.vercel.app/documents/swagger",
         redoc: "https://personel-api3.vercel.app/documents/redoc",
         json: "https://personel-api3.vercel.app/documents/json",
       },
