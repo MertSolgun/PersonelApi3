@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(require("cookie-session")({ secret: process.env?.SECRET_KEY }));
 app.use(require("./src/middlewares/findSearchSortPage"));
 app.use(require("./src/middlewares/authentication"));
-app.use(require("./src/middlewares/loggin"));
+//app.use(require("./src/middlewares/loggin"));
 
 //Routes
 app.use(require("./src/routes/"));
