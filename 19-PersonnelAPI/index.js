@@ -32,7 +32,7 @@ app.all("/", (req, res) => {
       documents: {
         swagger: "https://personel-api-gamma.vercel.app/documents/swagger",
         redoc: "https://personel-api-gamma.vercel.app/documents/redoc",
-        json: "https://personel-api-gamma.vercel.app/documents/swagger.json",
+        json: "https://personel-api-gamma.vercel.app/documents/json",
       },
       contact: "contact@clarusway.com",
     },
