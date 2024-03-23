@@ -30,9 +30,9 @@ app.all("/", (req, res) => {
     user: req.user,
     api: {
       documents: {
-        swagger: "https://personel-api-gamma.vercel.app/swagger",
-        redoc: "https://personel-api-gamma.vercel.app/redoc",
-        json: "https://personel-api-gamma.vercel.app/documents/json",
+        swagger: "https://personel-api-gamma.vercel.app/documents/swagger",
+        redoc: "https://personel-api-gamma.vercel.app/documents/redoc",
+        json: "https://personel-api-gamma.vercel.app/documents/swagger.json",
       },
       contact: "contact@clarusway.com",
     },
