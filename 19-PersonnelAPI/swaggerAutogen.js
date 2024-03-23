@@ -22,7 +22,7 @@ const options = {
 
 // const swaggerAutogen = require('swagger-autogen')({ openapi: '3.0.0', language: 'tr-tr' })
 const swaggerAutogen = require("swagger-autogen")();
-const packageJson = require("../package.json");
+const packageJson = require("./package.json");
 
 const document = {
   // info: {
@@ -79,8 +79,8 @@ const document = {
     // 		required: true
     // 	}
     // },
-    Department: require("../src/models/department.model").schema.obj,
-    Personnel: require("../src/models/personnel.model").schema.obj,
+    Department: require("./src/models/department.model").schema.obj,
+    Personnel: require("./src/models/personnel.model").schema.obj,
   },
 };
 
