@@ -15,10 +15,7 @@
   },
   "host": "https://personel-api-gamma.vercel.app/:8000",
   "basePath": "/",
-  "schemes": [
-    "http",
-    "https"
-  ],
+  "schemes": ["http", "https"],
   "securityDefinitions": {
     "Token": {
       "type": "apiKey",
@@ -30,9 +27,7 @@
   "paths": {
     "/auth/login": {
       "post": {
-        "tags": [
-          "Authentication"
-        ],
+        "tags": ["Authentication"],
         "summary": "Login",
         "description": "Login with username and password",
         "parameters": [
@@ -64,9 +59,7 @@
     },
     "/auth/logout": {
       "get": {
-        "tags": [
-          "Authentication"
-        ],
+        "tags": ["Authentication"],
         "summary": "Log out",
         "description": "Delete Token",
         "responses": {
@@ -165,9 +158,7 @@
     },
     "/departments/": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "List Departments",
         "description": "  You can send query with endpoint for search[], sort[], page and limit.  <ul> Examples:   <li>URL/?<b>search[field1]=value1&search[field2]=value2</b></li>   <li>URL/?<b>sort[field1]=1&sort[field2]=-1</b></li>   <li>URL/?<b>page=2&limit=1</b></li>  </ul>  ",
         "responses": {
@@ -177,9 +168,7 @@
         }
       },
       "post": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Create Department",
         "description": "",
         "parameters": [
@@ -207,9 +196,7 @@
     },
     "/departments/{id}": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Get Single Department",
         "description": "",
         "parameters": [
@@ -227,9 +214,7 @@
         }
       },
       "put": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Update Department",
         "description": "",
         "parameters": [
@@ -261,9 +246,7 @@
         }
       },
       "delete": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Delete Department",
         "description": "",
         "parameters": [
@@ -284,9 +267,7 @@
         }
       },
       "patch": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Update Department",
         "description": "",
         "parameters": [
@@ -320,9 +301,7 @@
     },
     "/departments/{id}/personel": {
       "get": {
-        "tags": [
-          "Departments"
-        ],
+        "tags": ["Departments"],
         "summary": "Personnels of Department",
         "description": "",
         "parameters": [
