@@ -29,9 +29,9 @@ app.use(require("./src/routes/"));
 const path = require("path");
 
 app.use("/documents/json", (req, res) => {
-  res.sendFile("swagger.json", { root: "." });
+  const filePath = path.join(__dirname, "PersonnelAPI", "swagger.json");
+  res.sendFile(filePath);
 });
-
 //? Swagger
 const swaggerJson = require("./swagger.json");
 const swaggerUi = require("swagger-ui-express");
