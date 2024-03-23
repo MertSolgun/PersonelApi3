@@ -1,8 +1,8 @@
 # PERSONNEL API
 
 ### ERD:
-![erdPersonnelAPI](https://github.com/MertSolgun/PersonelApi/assets/115940928/fb906ce9-2e73-48e8-8a2e-87208709a7f6)
 
+![erdPersonnelAPI](https://github.com/MertSolgun/PersonelApi3/assets/115940928/01e3bf6e-220e-4f44-88a5-8aca4a5e6568)
 
 
 ### Folder/File Structure:
