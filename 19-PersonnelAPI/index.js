@@ -27,9 +27,9 @@ app.all("/", (req, res) => {
     user: req.user,
     api: {
       documents: {
-        swagger: "http://127.0.0.1:8000/documents/swagger",
-        redoc: "http://127.0.0.1:8000/documents/redoc",
-        json: "http://127.0.0.1:8000/documents/json",
+        swagger: "https://personel-api-gamma.vercel.app/documents/swagger",
+        redoc: "https://personel-api-gamma.vercel.app/documents/redoc",
+        json: "https://personel-api-gamma.vercel.app/documents/json",
       },
       contact: "contact@clarusway.com",
     },
